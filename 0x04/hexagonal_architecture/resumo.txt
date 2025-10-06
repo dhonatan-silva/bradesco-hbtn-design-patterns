@@ -1,0 +1,31 @@
+O que é Arquitetura Hexagonal e por quem foi criada?
+A Arquitetura Hexagonal, também chamada de "Ports and Adapters", foi criada por Alistair Cockburn. 
+Ela propõe uma estrutura em que o núcleo da aplicação — a lógica de negócios — é isolado das interações externas, como banco de dados, interfaces gráficas ou APIs. 
+Esse isolamento é feito por meio de portas (interfaces) e adaptadores (implementações), permitindo que o sistema seja flexível, testável e independente de tecnologias externas.
+
+
+Quais são os benefícios e recursos que ela fornece?
+Entre os principais benefícios da Arquitetura Hexagonal estão:
+- Isolamento da lógica de negócios, protegendo o domínio de mudanças externas.
+- Independência tecnológica, permitindo trocar bancos de dados, frameworks ou interfaces sem afetar o núcleo.
+- Flexibilidade e escalabilidade, ideal para sistemas que precisam crescer ou se adaptar rapidamente.
+- Facilidade de testes, já que o núcleo pode ser testado sem depender de componentes externos.
+- Criação e substituição de adaptadores, facilitando a manutenção e evolução do sistema.
+- Aplicação em microsserviços, permitindo que cada serviço seja autônomo e desacoplado.
+Além disso, a arquitetura permite adiar decisões técnicas e aplicar o conceito de Inversão de Controle (IoC), mantendo o domínio livre de acoplamento direto com tecnologias externas.
+
+
+Quais as diferenças entre Arquitetura Hexagonal e Clean Architecture?
+Ambas compartilham princípios como isolamento do domínio e inversão de dependência, mas têm abordagens distintas:
+- A Arquitetura Hexagonal foca na comunicação entre o sistema e o mundo externo, usando portas e adaptadores para conectar o núcleo aos atores principais (como usuários) e secundários (como bancos de dados).
+- A Clean Architecture, proposta por Robert C. Martin (Uncle Bob), organiza o sistema em camadas concêntricas, com foco na separação de responsabilidades e regras de negócio.
+Enquanto a Hexagonal é mais voltada para o fluxo de entrada e saída, a Clean Architecture enfatiza a estrutura interna e a organização por papéis.
+
+
+A Arquitetura Hexagonal pode ser usada em qualquer projeto?
+Sim, ela pode ser aplicada em diversos tipos de projetos, mas nem sempre é a melhor escolha. Antes de adotá-la, é importante considerar:
+- Complexidade do sistema: projetos simples podem não justificar o esforço adicional.
+- Necessidade de flexibilidade: se o sistema precisa trocar tecnologias com frequência, o modelo é ideal.
+- Maturidade da equipe: exige conhecimento sólido de princípios como IoC e responsabilidade única.
+- Custo de manutenção: a criação de portas e adaptadores pode aumentar o esforço inicial.
+Em projetos que exigem alta manutenibilidade, testes robustos e independência tecnológica — especialmente microsserviços — a Arquitetura Hexagonal se mostra extremamente eficaz.
